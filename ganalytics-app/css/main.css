@@ -1,0 +1,236 @@
+/* main css is dev css for now - ever thing wil lgo in here when it starts getting big I will split it */
+
+body {
+    color: #848484;
+    font-family: 'Roboto',arial,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+
+md-toolbar.main-header {
+    background: #fff;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,.3);
+}
+
+.header-h1 {
+    margin: 0 0 0 20px;
+    padding: 20px 20px 0 10px;  /* 76 is fot the text in the real website - logo is image */
+    min-height: 47px;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+
+
+.main-navigation {
+    position: relative;
+}
+
+.header-cta {
+    position: absolute;
+    top: -47px;
+    right: 0;
+}
+
+
+/* main */
+.section {position: relative;}
+.section-hero {
+    min-height: 400px;
+    padding: 0;
+}
+
+.main {
+    overflow: hidden;
+    width: 100%;
+}
+
+.site-width {
+    box-sizing: content-box;
+    max-width: 984px;
+    margin: 0 auto;
+}
+
+.section-hero-copy {
+    padding: 80px 0;
+}
+
+.section-hero-h1 {
+    font-size: 48px;
+    line-height: 58px;
+    margin: 0 0 25px;
+}
+
+p:last-child, p.last {
+    margin-bottom: 0;
+}
+
+.font-large {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 25px;
+    font-weight: 300; /* they have this for all media. */
+}
+
+.md-button.md-f4f4f4 {
+    background-color:#f4f4f4 !important;
+    color: #333 !important;
+}
+
+/* hero media */
+
+.section-hero-media {
+    bottom: 0;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    min-height: 400px;
+}
+
+.caption.card {
+    display: block;
+}
+
+.caption.card {
+    border-radius: 0;
+    /*display: none;*/
+    margin-bottom: 0;
+    padding: 15px 28px 17px;
+}
+.caption {
+    background-color: #fff;
+    border: 0 solid transparent;
+    color: #848484;
+    /*display:none;*/
+}
+
+.caption {
+    border-right-width: 3px;
+    bottom: 30px;
+    display: block;
+    min-width: 250px;
+    position: absolute;
+}
+
+.caption.aaa {
+    border-color: #aaa;
+}
+
+.caption.deep-teal {
+    border-color: #00bfa5;
+}
+/*.deep-teal {*/
+    /*background: #00bfa5;*/
+/*}*/
+
+div.myfab {
+    margin-top: -25px;
+}
+.md-button.myfab {background-color:#f4f4f4 !important; }
+
+svg.icon-fab-scroll.ng-scope polygon {
+    padding-top: 5px;
+}
+/* section-quote */
+
+
+/* use this as their h1 and h2  and check out the other thing they add*/
+h1, h2 {
+    color: #444;
+    font-family: "Roboto Slab", palatino, serif;
+    font-size: 28px;
+    font-weight: 300;
+    letter-spacing: -.2px;
+    line-height: 38px;
+}
+
+h1, h2, h3, blockquote {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+/* google analytics uses this as general class for hero images
+ - And then will use a second hero-img to make custom changes like the image and background position it seems
+*/
+.hero-img {
+
+    background-image: url('../../images-1/hero-media-image/section-hero-media1.jpg');
+    /*background-image: url('../imgs/hero-745-624.png');*/
+}
+
+.hero-image {
+    background-position: left center;
+    background-size: cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/* section quote */
+
+
+.cccbg {
+    background: #ccc;
+}
+
+.eeebg {
+    background: #eee;
+}
+
+blockquote {
+    font-family: 'Roboto Slab',palatino,serif;
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: -.1px;
+    line-height: 28px;
+    margin: 0;
+}
+
+
+.font-medium {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+}
+
+blockquote+cite {
+    display: block;
+    margin: 30px 0 0;
+}
+
+cite {
+    font-style: normal;
+}
+
+
+
+@media (min-width: 600px) {
+
+/* section-quote */
+
+    blockquote {
+        font-size: 34px;
+        line-height: 48px;
+    }
+
+    .quotation {
+        text-align: center;
+    }
+
+    .quotation-extra {
+        padding: 120px 0;
+    }
+
+    .font-medium {
+        line-height: 24px;
+    }
+
+}

@@ -1,0 +1,103 @@
+<div class="gallery-component" ng-controller="GalleryController as gallery" role="main " layout="column">
+
+    <div ng-controller="sidenavWithTbbCtrl" layout="column" style="height:500px;" ng-cloak>
+        <section layout="row" flex>
+            <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+                <md-toolbar class="md-theme-indigo">
+                    <h1 class="md-toolbar-tools">Sidenav Left</h1>
+                </md-toolbar>
+                <md-content layout-padding ng-controller="LeftCtrl">
+                    <md-button ng-click="close()" class="md-primary" hide-gt-md>
+                        Close Sidenav Left
+                    </md-button>
+                    <p hide-md show-gt-md>
+                        This sidenav is locked open on your device. To go back to the default behavior,
+                        narrow your display.
+                    </p>
+                </md-content>
+            </md-sidenav>
+            <md-content class="main-pics-app" flex layout-padding>
+                <div layout="column" layout-fill layout-align="top center">
+                    <div class="toggle-left">
+                        <md-button ng-click="toggleLeft()"
+                                   class="md-primary" hide-gt-md>
+                            Toggle left
+                        </md-button>
+                    </div>
+                    <div class="pic-app-category-header card-outline" layout="row">
+
+                        <img class="moduleHeaderLogo" ng-src="../images/category-images/{{myFilter.category | underscore_join}}_cat.png" alt=""/>
+                        <div class="moduleHeaderTitle-el">{{myFilter.category | capitalize}} Options</div>
+                        <div flex></div>
+
+                    </div>
+                    <!--<div class="pic-app-category-header">-->
+                    <!---->
+                    <!--<img src="../images/pics-app/mirabg-160.jpg" alt=""/>-->
+                    <!--</div>-->
+
+                    <div class="" layout="row" layout-wrap layout-margin>
+
+
+
+                        <div ng-repeat="pic in picsList | filter:myFilter" class="profile-pic-card">
+
+                            <div>
+                                <div class="ppc-image-container">
+                                    <a ui-sref="picDetails({picsId:pic.picsId})">
+                                        <img ng-src="{{pic.profileImage}}" alt=""/>
+                                    </a>
+                                    <div class="littleimg">
+                                        <img src="{{pic.littleImage}}" alt=""/>
+                                    </div>
+                                </div>
+
+                                <div>
+
+                                    <div class="ppc-headlineText">
+                                        {{pic.name}}
+                                    </div>
+
+                                    <div class="ppc-subheadText">
+                                        {{pic.description}}
+                                    </div>
+
+                                    <div class="ppc-price-more" layout="row">
+                                        <div class="ppc-price">
+                                            $99
+                                        </div>
+                                        <div flex></div>
+                                        <a href="#/pics-detail/{{pic.picsId}}" class="md-primary md-button md-default-theme">
+                        <span class="ng-scope">
+                           SEE MORE
+                        </span>
+                                        </a>
+
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+
+                    <!--<div>-->
+                    <!--<md-button ng-click="toggleRight()"-->
+                    <!--class="md-primary">-->
+                    <!--Toggle right-->
+                    <!--</md-button>-->
+                    <!--</div>-->
+                </div>
+                <div flex></div>
+            </md-content>
+
+        </section>
+
+    </div>
+</div>

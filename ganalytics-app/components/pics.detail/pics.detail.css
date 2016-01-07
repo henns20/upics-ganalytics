@@ -1,0 +1,85 @@
+html, body {
+    font-family: 'Roboto',sans-serif;
+    margin: 0
+    padding: 0
+}
+
+
+.product-image {
+    margin-bottom: 25px;
+}
+.product-image img {
+    max-width: 65%;
+    object-fit: cover;
+    border: solid 5px #fff;
+    box-shadow: 0 2px 2px #222;
+}
+
+.product-main {
+    padding: 50px 0px
+}
+
+.more-information {
+    background: #fff;
+}
+
+.map-right {
+    float: right;
+    margin: 0 0 10px 10px;
+}
+
+.span-title {
+    font-weight: bold;
+}
+
+.span-quantity {
+    font-weight: bold;
+
+}
+.product-info-header {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.product-description p, .more-information p {
+font-size: .95em;
+}
+
+.product-info-title {
+    font-size: 1.25em;
+    margin: 0 0 15px;
+}
+
+.product-price {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-left: 8px;
+}
+.signup-info {
+    font-size: 1em;
+    width: 80%
+}
+.discount-info {
+    padding: 8px 0;
+}
+
+.button-container {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.calendar-mock-container {
+    margin: 20px 0 0;
+}
+
+.product-description {
+    background: #fff;
+    padding: 10px 8px;
+}
+
+.button-container .cta-admob-btn {
+ font-size: 1.25em;
+}
+
+.gb-express-card {box-shadow: 0 -3px 5px rgba(0,0,0,0.1),0 1px 2px 0 rgba(0,0,0,0.2);}
+.product-right-top-padding {margin-top: 40px;}

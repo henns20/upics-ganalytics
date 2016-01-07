@@ -1,9 +1,39 @@
 
+.section-sub-heading.border-deep-teal:after {
+    background-color: #00bfa5;
+}
 
-
+.section-sub-heading:after {
+    background-color: #f6f6f6;
+    bottom: -2px;
+    content: '';
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 60px;
+}
 
 @media (min-width: 768px) {
     .section2 {
-        padding: 88px 0 68px; /* padding: 88px 0 94px used on the quote section */
+        padding: 68px 0 68px; /* padding: 88px 0 94px used on the quote section */
+    }
+
+    p {
+        margin: 0 0 20px;
+    }
+
+    h4, h5, .link-more {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 38px;
+        line-height: 48px;
+        margin: 0 0 25px;
+    }
+
+    h3 {
+        font-size: 22px;
+        line-height: 30px
     }
 }

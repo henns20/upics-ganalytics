@@ -1,13 +1,15 @@
 /* main css is dev css for now - ever thing wil lgo in here when it starts getting big I will split it */
 
-body {
+body, md-content {
     color: #848484;
     font-family: 'Roboto',arial,sans-serif;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 20px;
 }
-
+.light-gray {
+    background: #f6f6f6;
+}
 
 md-toolbar.main-header {
     background: #fff;
@@ -25,10 +27,28 @@ md-toolbar.main-header {
     white-space: nowrap;
 }
 
-
+.main-header a.nav-dropdown-trigger {
+    /*color: #448aff;*/
+    color: #848484;
+    text-align: center;
+    text-transform: uppercase;
+    padding-left: 0;
+    width: 95%;
+}
 
 .main-navigation {
     position: relative;
+}
+.main-header .main-navigation a.main-links {
+    color: #848484;
+}
+
+.main-header .main-navigation a.main-links:active {
+    color: #444;
+}
+
+.main-header .main-navigation a.main-links:hover {
+    color: #444;
 }
 
 .header-cta {
@@ -41,7 +61,7 @@ md-toolbar.main-header {
 /* main */
 .section {position: relative;}
 .section-hero {
-    min-height: 400px;
+    max-height: 430px;
     padding: 0;
 }
 
@@ -80,6 +100,16 @@ p:last-child, p.last {
 .md-button.md-f4f4f4 {
     background-color:#f4f4f4 !important;
     color: #333 !important;
+}
+
+
+.md-button.md-00c853 {
+    background: #00c853;
+    color: #fff !important;
+}
+
+.md-00c853:hover, .md-00c853:focus, a.md-00c853:hover, a.md-00c853:focus {
+    background: #43a047 !important;
 }
 
 /* hero media */
@@ -149,10 +179,30 @@ h1, h2 {
     line-height: 38px;
 }
 
+h1.roboto, h2.roboto {
+    color: #444;
+    font-family: 'Roboto',palatino,serif;
+    font-size: 28px;
+    font-weight: 300;
+    letter-spacing: -.2px;
+    line-height: 38px;
+}
+
+.section-dark h1, .section-dark h2, .section-dark h3, .section-dark h4, .section-dark h5, .section-dark blockquote, .section-dark a {
+    color: #fff;
+}
+
 h1, h2, h3, blockquote {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+}
+
+.section-dark {
+    color:#fff;
+}
+.deep-teal {
+    background:#00bfa5;
 }
 
 /* google analytics uses this as general class for hero images
@@ -214,6 +264,33 @@ cite {
 
 @media (min-width: 600px) {
 
+    body, md-content {
+        line-height: 22px;
+    }
+
+/*  header */
+.nav-dropdown-wrapper {
+    display: inline-block;
+    position: absolute;
+    width: auto;
+    background: transparent;
+    box-shadow: none;
+    top: -30px;
+    right: 165px;
+    bottom: auto;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.header a.nav-dropdown-trigger {
+    text-align: center;
+    /*line-height: 70px;
+    height: 70px;*/
+    display: block;
+    padding: 0 20px;
+    width: auto;
+}
+
 /* section-quote */
 
     blockquote {
@@ -232,5 +309,12 @@ cite {
     .font-medium {
         line-height: 24px;
     }
+
+/*sec.section-ga refers to Google analytics section CSS*/
+        .section-ga {
+            padding: 88px 0 94px;
+        }
+
+
 
 }

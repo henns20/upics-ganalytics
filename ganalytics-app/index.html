@@ -5,42 +5,58 @@
     <title>Ganalytics- Standard</title>
 
     <!-- fonts -->
-    <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;lang=en" rel=
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700&lang=en" rel=
             "stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Roboto+Slab:300,400,500&amp;lang=en" rel=
+    <link href="//fonts.googleapis.com/css?family=Roboto+Slab:300,400,500&lang=en" rel=
+            "stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Product+Sans:400&lang=en" rel=
             "stylesheet">
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="../bower_components/angular-material/angular-material.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/site-colors.css">
+    <link rel="stylesheet" href="components/gallery/gallery.css">
+    <link rel="stylesheet" href="components/pics.detail/pics.detail.css">
+    <link rel="stylesheet" href="views/landing.css">
+    <link rel="stylesheet" href="views/for-individuals.css"/>
     <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="views/contact-us.css">
+    <link rel="stylesheet" href="views/for-groups.css">
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css"/>
 </head>
 <body ng-app="ganalytics">
+
 
 <md-toolbar class="main-header" layout="column">
     <h1 class="product-logo header-h1">
         <a href="#">
-            <img src="http://placehold.it/160x30?text=logo" alt=""/>
+            <img src="/images-1/logoimages/logo-el-full-35h.png" alt=""/>
+            <!-- <img src="http://placehold.it/160x30?text=logo" alt=""/> -->
         </a>
     </h1>
     <nav class="main-navigation" layout="row">
-    <md-menu-bar>
-        <md-menu>
-            <button>Home</button>
-        </md-menu>
-        <md-menu>
-            <button>Link2</button>
-        </md-menu>
-        <md-menu>
-            <button>Link3</button>
-        </md-menu>
-        <md-menu>
-            <button>Link4</button>
-        </md-menu>
-    </md-menu-bar>
+    <div layout="row">
+
+
+           <md-button><a href="#/home">Home</a></md-button>
+
+
+            <md-button><a href="#/gallery">Gallery</a></md-button>
+
+
+            <md-button><a href="#/for-individuals">How It Works</a></md-button>
+
+         <md-button><a href="#/custom-services">Custom</a></md-button>
+        <md-button><a href="#/contact-us">Contact Us</a></md-button>
+
+    </div>
+    <div class="nav-dropdown-wrapper">
+      <a class="nav-dropdown-trigger">A Philadelphia Company</a>
+    </div>
         <div class="header-cta">
-            <a href="">
-                <md-button class="md-raised md-f4f4f4">Primary Button</md-button>
+            <a href="#/for-groups">
+                <md-button class="md-raised md-f4f4f4">Group Friendly</md-button>
             </a>
         </div>
         </nav>
@@ -51,13 +67,89 @@
   <div ui-view name="main_content" class=""></div>
 </div>
 
+<footer class="footer" id="footer" layout="row">
+    <div class="site-width" flex="grow">
+      <div layout="row" class="footer-upper" layout-padding layout-align="center center">
+        <div flex="50" class="footer-social">
+          <dl>
+            <dt>Follow us on:</dt>
+              <dd>
+                <a href="#">
+                  <img class="icon-footer-gplus"
+                       src="http://placehold.it/20x20"/>
+                </a>
+              </dd>
+              <dd>
+                <a href="#">
+                  <img class="icon-footer-gplus"
+                       src="http://placehold.it/20x20"/>
+                </a>
+              </dd>
+              <dd>
+                <a href="#">
+                  <img class="icon-footer-gplus"
+                       src="http://placehold.it/20x20"/>
+                </a>
+              </dd>
+              <dd>
+                <a href="#">
+                  <img class="icon-footer-gplus"
+                       src="http://placehold.it/20x20"/>
+                </a>
+              </dd>
 
+          </dl>
+        </div>
+
+        <div flex="50" class="footer-meta-links" layout-align="end center">
+          <div layout="row" layout-align="end end">
+          <ul flex="50">
+            <li>About</li>
+            <li>Contact Us</li>
+          </ul>
+          </div>
+        </div>
+      </div>
+        <nav class="footer-nav" layout="row" layout-padding layout-align="center center">
+          <dl flex="25">
+            <dt><a href="#">Home</a></dt>
+          </dl><dl flex="25">
+            <dt><a href="#">Gallery</a></dt>
+          </dl><dl flex="25">
+            <dt><a href="#">How It Works</a></dt>
+          </dl><dl flex="25">
+            <dt><a href="#">Custom</a></dt>
+          </dl>
+
+        </nav>
+        <div class="footer-lower" layout="row" layout-padding>
+          <div class="footer-meta-links" flex="70">
+            <ul>
+              <li><a href="">Help</a></li>
+              <li><a href="">Google</a></li>
+              <li><a href="">Privacy</a></li>
+              <li><a href="">Terms</a></li>
+            </ul>
+          </div>
+          <div class="footer-locale-switcher" flex="30">
+             <div layout="column" layout-align="center center">
+               <div class="">
+                 Language
+               </div>
+             </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</footer>
 <!-- bower:js -->
 <script src="../bower_components/angular/angular.min.js"></script>
 <script src="../bower_components/angular-aria/angular-aria.min.js"></script>
 <script type="text/javascript" src="../bower_components/angular-material/angular-material.min.js"></script>
 <script src="../bower_components/angular-animate/angular-animate.min.js"></script>
 <script src="../node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="../node_modules/angular-resource/angular-resource.min.js"></script>
 <!-- end bower -->
 
 
@@ -67,11 +159,15 @@
 <script src="modules/myAmaterialModule/myAmModule.js"></script>
 <script src="modules/myAmaterialModule/sidenavDemo1/sidenavDemo1.js"></script>
 <script src="modules/myAmaterialModule/sidenavWithTbb/sidenavWithTbb.js"></script>
-<script src="services/pics-options.js"></script>
+
 <script src="app.js"></script>
 
 <!-- Ajs and component stuff -->
 <script src="components/gallery/gallerycontroller.js"></script>
+<script src="components/pics.detail/picsdetailctrl.js"></script>
+<script src="services/pics-options.js"></script>
+<script src="services/pics-service1.js"></script>
+<script src="filters/appfilters.js"></script>
 
 <!-- end ganalytics scripts -->
 

@@ -1,22 +1,53 @@
 <div class="gallery-component" ng-controller="GalleryController as gallery" role="main " layout="column">
 
-    <div ng-controller="sidenavWithTbbCtrl" layout="column" style="height:500px;" ng-cloak>
+    <div ng-controller="sidenavWithTbbCtrl" layout="column" ng-cloak>
 
         <section class="gallerycomponent-content" layout="row" flex>
 
             <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
-                <md-toolbar class="md-theme-indigo">
-                    <h1 class="md-toolbar-tools">Sidenav Left</h1>
+                <!-- left sidebar header -->
+                <md-toolbar class="pics-app-toolbar-top">
+                    <div layout="row" layout-padding>
+                        <div>
+                            <div class="pics-app-nav-top-left">Current</div>
+                            <div class="pics-app-nav-bottom-left">ubrPics</div>
+                        </div>
+                        <div flex></div>
+
+                        <div class="pics-app-nav-right"><a href="#/pics-app">All</a></div>
+                    </div>
+
+                    <div class="pics-left-nav-hr"></div>
+
                 </md-toolbar>
 
               <md-content layout-padding ng-controller="LeftCtrl">
                     <md-button ng-click="close()" class="md-primary" hide-gt-md>
                         Close Sidenav Left
                     </md-button>
-                    <p hide-md show-gt-md>
-                        This sidenav is locked open on your device. To go back to the default behavior,
-                        narrow your display.
-                    </p>
+                    <!--<p hide-md show-gt-md>-->
+                        <!--This sidenav is locked open on your device. To go back to the default behavior,-->
+                        <!--narrow your display.-->
+                    <!--</p>-->
+                  <div class="more-padding-4" hide-md show-gt-md>
+                      <div class="left-nav-category-header">
+                          Category
+                      </div>
+
+
+                      <ul class="pics-app-ul">
+
+                          <li class="pics-app-li" ng-click="gallery.myFilter = {category:'silicon valley'}">
+                              <a href="">Silicon Valley/Tech</a></li>
+                          <li class="pics-app-li" ng-click="gallery.myFilter = {category: 'other influencers'}">
+                              <a href="">Other Influencers/Icons</a></li>
+                          <li class="pics-app-li" ng-click="gallery.myFilter = {category: 'smart locations'}"><a href="">Smart Locations</a></li>
+                          <li class="pics-app-li" ng-click="gallery.myFilter = {category: 'cheeky'}"><a href="">Cheeky Options</a></li>
+                          <li class="pics-app-li" ng-click="gallery.myFilter = {category: 'featured photographer'}"><a href="">Featured photographers</a></li>
+                          <li class="pics-app-li"><a ng-click="mgallery.myFilter = {}">All</a></li>
+                          <!--<a href="#/pics-app">Other Influencers & Icons</a>-->
+                      </ul>
+                  </div>
                </md-content>
             </md-sidenav>
 
@@ -29,20 +60,20 @@
                             Toggle left Testing
                         </md-button>
                     </div>
-                    <!--<div class="pic-app-category-header card-outline" layout="row">-->
 
-                        <!--<img class="moduleHeaderLogo" ng-src="../images/category-images/{{myFilter.category | underscore_join}}_cat.png" alt=""/>-->
-                        <!--<div class="moduleHeaderTitle-el">{{myFilter.category | capitalize}} Options</div>-->
-                        <!--<div flex></div>-->
+                    <div class="pic-app-category-header card-outline" layout="row" layout-margin>
 
-                    <!--</div>-->
-                    <!--<div class="pic-app-category-header">-->
-                    <!---->
-                    <!--<img src="../images/pics-app/mirabg-160.jpg" alt=""/>-->
-                    <!--</div>-->
+                        <img class="moduleHeaderLogo" ng-src="../images/category-images/{{gallery.myFilter.category | underscore_join}}_cat.png" alt=""/>
+
+
+                        <!--<img src="../images-1/hero-media-image/g-campus-1.jpg" alt=""/>-->
+                        <div class="moduleHeaderTitle-el">{{gallery.myFilter.category | capitalize}}  Options</div>
+                        <div flex></div>
+
+                    </div>
+
 
                     <div class="gallerycomponent-content" layout="row" layout-wrap layout-margin>
-
 
 
                         <div ng-repeat="pic in gallery.picsList" class="profile-pic-card">
@@ -72,7 +103,7 @@
                                             $99
                                         </div>
                                         <div flex></div>
-                                        <a href="#/pics-detail/{{pic.picsId}}" class="md-primary md-button md-default-theme">
+                                        <a href="#/photo-detail/{{pic.picsId}}" class="md-primary md-button md-default-theme">
                         <span class="ng-scope">
                            SEE MORE
                         </span>
